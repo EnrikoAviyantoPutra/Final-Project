@@ -95,11 +95,13 @@ header h1 {
     font-size: 20px;
     color: #ff4646;
     width: 7%;
-    margin: auto 830px;
+    margin: 20px auto;
     border: 1px solid black;
+    border-radius: 10px;
     text-align: center;
     background-color: #fcf8ec;
     font-weight: bold;
+    position: relative;
 }
 
 #reset:hover {

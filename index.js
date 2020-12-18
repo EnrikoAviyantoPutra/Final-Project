@@ -10,7 +10,9 @@ const pilihanGunting = document.getElementById('gunting')
 const displayHasil = document.getElementById('hasil-game')
 const resetSkor = document.getElementById('reset')
 
-resetSkor.addEventListener('click', function() {
+
+
+resetSkor.addEventListener('click', function() { //untuk Reset tombol skor 
     skorPemain = 0;
     skorKomp = 0;
     displaySkorPemain.innerHTML = skorPemain
@@ -24,7 +26,7 @@ function komputer() {
     return pilihan[number]
 }
 
-
+// Function untuk mengambil data pilihan suit pemain jika di klik di gambar 
 function pemain() {
     pilihanBatu.addEventListener('click', function() {
         game('Batu');
@@ -37,7 +39,7 @@ function pemain() {
     })
 }
 pemain()
-
+    // Function untuk menampilkan suit pemain menang
 function menang(pilihanPemain, pilihanKomp) {
     skorPemain++
     displaySkorPemain.innerHTML = skorPemain
@@ -46,7 +48,7 @@ function menang(pilihanPemain, pilihanKomp) {
         // console.log(skorPemain, '-', skorKomp);
 
 }
-
+// Function untuk menampilkan suit pemain hasil kalah 
 function kalah(pilihanPemain, pilihanKomp) {
     skorKomp++
     displaySkorKomp.innerHTML = skorKomp
@@ -54,13 +56,13 @@ function kalah(pilihanPemain, pilihanKomp) {
         // console.log('KALAH');
         // console.log(skorPemain, '-', skorKomp);
 }
-
+// Funtion untuk menampilkan hasil suit yang seri 
 function seri(pilihanPemain, pilihanKomp) {
     // console.log('SERI');
     displayHasil.innerHTML = `${pilihanKomp} sama ${pilihanPemain}. SERI!!!`
 }
 
-
+// Function untuk menentukan hasil suit pemain dan komputer
 function game(pilihanPemain) {
     const pilihanKomp = komputer()
         // console.log('Komputer => ', pilihanKomp, '-', 'Pemain =>', pilihan);
